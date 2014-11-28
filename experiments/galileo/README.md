@@ -48,3 +48,7 @@
 | IO19       | GPIO     | gpio58          | -                  | gpio59           | gpio60(H)      | gpio79(H)      | R/F/B           |
 |            | ADC A4   | in_voltage5_raw |                    |                  | gpio60(H)      | gpio79(L)      | -               |
 |            | I2C SCL  | i2c-0           |                    |                  | gpio60(L)      | -              | -               |
+
+“L” The GPIO is configured as an output, with output level as LOW
+“H” The GPIO is configured as an output, with output level as HIGH
+“I” The GPIO is configured as a high-impedance input
