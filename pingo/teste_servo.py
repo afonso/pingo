@@ -1,11 +1,13 @@
 import pingo
 from pingo.parts import Servo
 
-arduino = pingo.arduino.get_arduino()
+placa = pingo.detect.MyBoard()
 
-p = arduino.pins[13]
+p = placa.pins[9]
+a = placa.pins["A0"]
 
 servo = Servo(p)
-while 1:
-  servo.degree(30)
-  print '.'
+while True:
+  angulo = a.ratio() * 180
+  servo.degree(angulo)
+  print angulo,

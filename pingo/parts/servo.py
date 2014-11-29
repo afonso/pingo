@@ -9,9 +9,9 @@ class Servo(object):
 		self.pin = pin
 
 	def degree(self, value):
-		micro_seconds = value * (2350 - 500) / 180 + 500
+		micro_seconds = (value * (2350 - 500) / 180 + 500) / 1000000.0
 		self.pin.high()
-		time.sleep(micro_seconds / 1000000.0)
+		time.sleep(micro_seconds)
 		self.pin.low()
-		time.sleep(4400 - (micro_seconds / 1000000.0))
+		time.sleep(micro_seconds)
 		time.sleep(0.2)
