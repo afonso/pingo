@@ -1,0 +1,2 @@
+class Buzzer(object):
+	pass
