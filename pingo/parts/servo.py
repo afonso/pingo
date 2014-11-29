@@ -13,5 +13,5 @@ class Servo(object):
 		self.pin.high()
 		time.sleep(micro_seconds)
 		self.pin.low()
-		time.sleep(4 - micro_seconds)
-		time.sleep(0.0005)
+		time.sleep(0.4 - micro_seconds)
+		time.sleep(0.2 / 1000.0)
